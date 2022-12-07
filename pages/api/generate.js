@@ -10,10 +10,12 @@ const configuration = new Configuration({
 // this provides access to all the api endpoints/methods
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = `You are an email writer bot, who writes email with the given properties on a subject. The email should contain\n1. A new clear subject line that accurately reflects the content of the email.\n2. A professional greeting.\n3. The main body of the email, which provides the necessary information or details in a logical and easy-to-follow manner.\n4. Provide a little more information on the main body with bullet points.\n5. A call to action, asking the recipient to reply or providing them with next steps, then a closing\nAdditionally, a good email should be well-written and free of grammar and spelling errors. It should also be formatted in a way that is easy to read, with appropriate use of paragraphs, bullet points, and other formatting tools as needed. Do a sentiment analysis of the email.`;
+
 const generateAction = async (req, res) => {
     // run first prompt
     console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
+    console.log(basePromptPrefix);
 
     // calls the createCompletion method specifying the model, prompt, temperature and max tokens to use and 
     // then sends the request to the openai api

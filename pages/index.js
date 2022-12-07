@@ -34,6 +34,11 @@ const Home = () => {
     setUserInput(event.target.value);
   }
 
+  const copyOutput = () => {
+    navigator.clipboard.writeText(apiOutput);
+
+  }
+
   return (
     <div className="root">
       <Head>
@@ -42,7 +47,7 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>GPT3-Powered Email Wrting Assistant</h1>
+            <h1>GPT3-Powered Email Writing Assistant</h1>
           </div>
           <div className="header-subtitle">
             <h2>Write faster, better , and more efficiently</h2>
@@ -51,7 +56,7 @@ const Home = () => {
       </div>
       <div className='prompt-container'>
         <textarea 
-          placeholder='start typing here...' className='prompt-box' value={userInput} 
+          placeholder='An email...' className='prompt-box' value={userInput} 
           onChange={onUserChangedText}
         />
         <div className='prompt-buttons'>
@@ -70,6 +75,9 @@ const Home = () => {
             </div>
             <div className='output-content'>
               <p>{apiOutput}</p>
+            </div>
+            <div className='copy-button' >
+              <p className='copy' onClick={copyOutput}>Copy</p>
             </div>
           </div>
 
