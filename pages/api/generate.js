@@ -15,8 +15,7 @@ const basePromptPrefix = `You are an email writer bot, who writes email with the
 const generateAction = async (req, res) => {
     // run first prompt
     console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
-    console.log(basePromptPrefix);
-
+    
     // calls the createCompletion method specifying the model, prompt, temperature and max tokens to use and 
     // then sends the request to the openai api
     const baseCompletion = await openai.createCompletion({
@@ -25,6 +24,7 @@ const generateAction = async (req, res) => {
         temperature: 0.7,
         max_tokens: 410,
     });
+    console.log("success: fdf", baseCompletion.data);
 
     // get the last element from choices array of the data object returned from the api
     const basePromptOutput = baseCompletion.data.choices.pop();
