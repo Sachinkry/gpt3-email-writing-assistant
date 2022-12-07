@@ -115,6 +115,7 @@ body {
 
 textarea {
     font-family: 'Manrope', sans-serif;
+    padding: 5px;
 }
 
 
@@ -421,6 +422,31 @@ textarea {
     }
 }
 
+@media (max-width: 375px) {
+    
+    .container {
+        max-width: 100%;
+        min-width: 350px;
+        /* margin: auto; */
+    }
+
+    .header-title h1 {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+
+    .header-subtitle h2 {
+        font-size: 18px;
+    }
+
+    .prompt-container {
+        max-width: 330px;
+    }
+
+    .output {
+        max-width: 350px;
+    }
+}
 
 
  /* Loading ring animation */
