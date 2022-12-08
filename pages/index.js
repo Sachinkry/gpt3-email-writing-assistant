@@ -36,7 +36,6 @@ const Home = () => {
 
   const copyOutput = () => {
     navigator.clipboard.writeText(apiOutput);
-
   }
 
   return (
@@ -91,7 +90,7 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+            <p className='hide-logo-name'>build with buildspace</p>
           </div>
         </a>
       </div>

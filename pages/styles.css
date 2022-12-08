@@ -374,7 +374,7 @@ textarea {
     }
 }
 
-@media (max-width: 809px) {
+@media (max-width: 809px) and (min-width: 601px) {
     .container {
         max-width: 500px;
         width: 100%;
@@ -390,7 +390,7 @@ textarea {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px)  {
     .container {
         max-width: 400px;
         width: 100%;
@@ -420,31 +420,54 @@ textarea {
     .prompt-box {
         width: 100%;
     }
+
+    .output-content {
+        margin: 8px;
+    }
+
+    .hide-logo-name {
+        display: none;
+    }
 }
 
-@media (max-width: 375px) {
-    
+@media (max-width: 400px)  {
     .container {
-        max-width: 100%;
-        min-width: 350px;
-        /* margin: auto; */
+        /* max-width: 300px; */
+        width: 100%;
     }
 
     .header-title h1 {
-        font-size: 30px;
-        padding: 0 10px;
+        font-size: 40px;
     }
 
     .header-subtitle h2 {
-        font-size: 18px;
+        text-align: center;
+    }
+
+    .key-stroke, .or {
+        display: none;
+    }
+
+    .prompt-buttons {
+        justify-content: center;
     }
 
     .prompt-container {
-        max-width: 330px;
+        max-width: 310px;
+        width: 100%;
+        /* margin: 5px; */
     }
 
-    .output {
-        max-width: 350px;
+    .prompt-box {
+        width: 100%;
+    }
+
+    .output-content {
+        /* margin: 3px; */
+    }
+    
+    .hide-logo-name {
+        display: none;
     }
 }
 
