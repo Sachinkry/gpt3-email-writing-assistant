@@ -65,6 +65,15 @@ const Home = () => {
             </div>
           </a>
         </div>
+        {!apiOutput && (
+          <div className='prompt-info'>
+            <h2 class='prompt-ex'>Some prompt examples:</h2>
+            <p>1. An email to a prospective client giving details on how you will carry out the project.</p>
+            <p>2. An email to developers reminding them of the upcoming deadline.</p>
+            <p>3. An email to a friend asking to join a project.</p>
+            <p>4. An email to a friend asking to join my team as a product manager.</p>
+          </div>
+        )}
         {apiOutput && (
           <div className='output'>
             <div className='ouput-header-container'>
@@ -79,7 +88,11 @@ const Home = () => {
               <p className='copy' onClick={copyOutput}>Copy</p>
             </div>
           </div>
-
+        )}
+        {apiOutput && (
+          <div className='feedback copy'>
+            <a href='https://docs.google.com/forms/d/e/1FAIpQLSeKCAyLUPpaGzcafQyzrmlh3r_NIna4BIYmYwfH_MRpvrOa4w/viewform?usp=sf_link' target='_blank' rel='noreferrer'>Give us feedback</a>
+          </div>
         )}
       </div>
       <div className="badge-container grow">
